@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "eamodio.gitlens", // GitLens — Git supercharged
+        "ms-azuretools.vscode-docker", // Docker
+        "amiralizadeh9480.laravel-intellisense", // Laravel Intellisense
+        "amiralizadeh9480.laravel-extra-intellisense", // Laravel Extra Intellisense
+        "yzhang.markdown-all-in-one", // Markdown All in One
+        "mehedidracula.php-constructor", // PHP Constructor
+        "felixfbecker.php-debug", // PHP Debug
+        "neilbrayfield.php-docblocker", // PHP DocBlocker
+        "phproberto.vscode-php-getters-setters", // PHP Getters & Setters
+        "bmewburn.vscode-intelephense-client", // PHP Intellisense
+        "mehedidracula.php-namespace-resolver", // PHP Namespace Resolver
+        "esbenp.prettier-vscode", // Prettier - Code Formatter
+        "mikestead.dotenv" // DotENV
+    ]
+}
