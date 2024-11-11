@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Passport\Passport;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -22,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
         // Hash the client secrets
         Passport::hashClientSecrets();
 
-        Passport::setClientUuids(false);
+        Passport::setClientUuids(true);
 
         // Set the expiration times for tokens
         Passport::tokensExpireIn(now()->addDays(15));
