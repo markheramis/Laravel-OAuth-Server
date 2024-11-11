@@ -8,6 +8,16 @@ use Symfony\Component\Console\Attribute\AsCommand;
 #[AsCommand(name: 'passport:install')]
 class InstallCommand extends PassportInstallCommand
 {
+
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'passport:install
+                            {--uuids=true : Use UUIDs for all client IDs}
+                            {--force : Overwrite keys they already exist}
+                            {--length=4096 : The length of the private key}';
     /**
      * Execute the console command.
      *
@@ -16,6 +26,9 @@ class InstallCommand extends PassportInstallCommand
     public function handle()
     {
         $this->call('passport:keys', ['--force' => $this->option('force'), '--length' => $this->option('length')]);
+
+        // temporarily disable publishing migrations due to a re-publishing bug in the vendor:publish command
+        // $this->call('vendor:publish', ['--tag' => 'passport-migrations']);
 
         if ($this->option('uuids')) {
             $this->configureUuids();
