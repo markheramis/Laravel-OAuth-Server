@@ -1,0 +1,47 @@
+
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    background-color: #edf2f4;
+}
+body.sticky-nav {
+    margin-top: 65px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+
+header {
+    margin-bottom: 15px;
+}
+
+
+.navbar {
+    font-family: Arimo,sans-serif;
+    letter-spacing: .125rem;
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 1.5;
+    .navbar-brand {
+        margin-right: 0;
+        padding-right: 0.375rem;
+        padding-bottom: 0.375rem;
+        white-space: nowrap;
+    }
+    .navbar-toggler {
+        border: none;
+        &:focus {
+            box-shadow: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='23' height='3' x='.5' y='2.5' fill='%239EA9B4' rx='1' ry='1'/%3E%3Crect width='23' height='3' x='.5' y='10.5' fill='%239EA9B4' rx='1' ry='1'/%3E%3Crect width='23' height='3' x='.5' y='18.5' fill='%239EA9B4' rx='1' ry='1'/%3E%3C/svg%3E");
+        }
+    }
+
+}
+
+
