@@ -10,14 +10,10 @@
                     <p class="mb-4"><strong>{{ $client->name }}</strong> is requesting permission to access your
                         account.</p>
                     @if (count($scopes) > 0)
-                        <ul class="list-group mb-4">
+                        <ul class="list-group list-group-flush mb-4">
                             @foreach ($scopes as $scope)
                                 <li class="list-group-item">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <p class="mb-0">{{ $scope->description }}</p>
-                                        </div>
-                                    </div>
+                                    <b>{{ Str::headline($scope->id) }}</b>: {{ $scope->description }}
                                 </li>
                             @endforeach
                         </ul>
