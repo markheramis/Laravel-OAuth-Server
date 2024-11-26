@@ -48,7 +48,7 @@ services:
         ports:
             - ${MYSQL_PORT:-3306}:3306
         healthcheck:
-            test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
             timeout: 45s
             interval: 10s
             retries: 10
@@ -84,7 +84,7 @@ services:
         networks:
             - "laravel-network"
         healthcheck:
-            test: [ "CMD", "redis-cli", "ping" ]
+            test: ["CMD", "redis-cli", "ping"]
             timeout: 45s
             interval: 10s
             retries: 10
@@ -95,13 +95,7 @@ networks:
 volumes:
     mysql-data:
         driver: local
-        driver_opts:
-            type: none
-            o: bind
-            device: ./storage/mysql
+        name: mysql-data
     redis-data:
         driver: local
-        driver_opts:
-            type: none
-            o: bind
-            device: ./storage/redis
+        name: redis-data
