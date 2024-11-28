@@ -31,5 +31,8 @@ class AppServiceProvider extends ServiceProvider
         Passport::refreshTokensExpireIn(now()->addDays(30));
         // Set the personal access token expiration time
         Passport::personalAccessTokensExpireIn(now()->addMonths(6));
+
+        // Define the scopes for the application
+        Passport::tokensCan(config('scopes'));
     }
 }
